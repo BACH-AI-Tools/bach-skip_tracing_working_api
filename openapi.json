@@ -1,0 +1,286 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Skip Tracing Working Api",
+    "version": "1.0.0",
+    "description": "RapidAPI: oneapiproject/skip-tracing-working-api"
+  },
+  "servers": [
+    {
+      "url": "https://skip-tracing-working-api.p.rapidapi.com"
+    }
+  ],
+  "paths": {
+    "/search/byemail": {
+      "get": {
+        "summary": "📧 / trace by email",
+        "description": "search people by email",
+        "operationId": "📧_/_trace_by_email",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "required": true,
+            "description": "Enter any email address to search.",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": false,
+            "description": "Example value: 1",
+            "schema": {
+              "type": "string",
+              "default": "1",
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/byaddress": {
+      "get": {
+        "summary": "🏠/ trace by address",
+        "description": "Search people by their address. Just like you search truepeople search.",
+        "operationId": "🏠/_trace_by_address",
+        "parameters": [
+          {
+            "name": "street",
+            "in": "query",
+            "required": true,
+            "description": "Example value: 3828 Double Oak Ln",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "citystatezip",
+            "in": "query",
+            "required": true,
+            "description": "Example value: Irving, TX 75061",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "If Records are more than 10, use pagination.",
+            "schema": {
+              "type": "string",
+              "default": "1",
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/bynameaddress": {
+      "get": {
+        "summary": "🏡 / trace by name and address",
+        "description": "search people by name and address",
+        "operationId": "🏡_/_trace_by_name_and_address",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "description": "Example value: James Whitsitt",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "citystatezip",
+            "in": "query",
+            "required": true,
+            "description": "Example value: Dallas, TX 75228",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "If Records are more than 10, use pagination.",
+            "schema": {
+              "type": "string",
+              "default": "1",
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/byname": {
+      "get": {
+        "summary": "🙎🏻‍♂️/ trace by name",
+        "description": "search people by name",
+        "operationId": "🙎🏻‍♂️/_trace_by_name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "description": "Example value: James E Whitsitt",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "If Records are more than 10, use pagination.",
+            "schema": {
+              "type": "string",
+              "default": "1",
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/detailsbyID": {
+      "get": {
+        "summary": "❇️ / personDetailsByID (email,phone)",
+        "description": "Get person's details by putting the ID",
+        "operationId": "❇️_/_persondetailsbyid_(email,phone)",
+        "parameters": [
+          {
+            "name": "peo_id",
+            "in": "query",
+            "required": true,
+            "description": "Enter the person ID found from any search endpoints above: Ex. 1: p4r4020l80998ll84l64 or, Ex. 2: james-whitsitt_id_G6853526028387863316",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search/byphone": {
+      "get": {
+        "summary": "📞 / trace by phone",
+        "description": "Search people Using phone number",
+        "operationId": "📞_/_trace_by_phone",
+        "parameters": [
+          {
+            "name": "phoneno",
+            "in": "query",
+            "required": true,
+            "description": "Example value: (214)349-3972",
+            "schema": {
+              "type": "string",
+              "default": null,
+              "enum": null
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "If Records are more than 10, use pagination.",
+            "schema": {
+              "type": "string",
+              "default": "1",
+              "enum": null
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-RapidAPI-Key"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiAuth": []
+    }
+  ]
+}

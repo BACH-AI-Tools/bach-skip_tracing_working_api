@@ -30,7 +30,7 @@ Visit **[EMCP Platform](https://sit-emcp.kaleido.guru)** now to start your MCP j
 
 ## Introduction
 
-This is an automatically generated MCP server using [FastMCP](https://fastmcp.wiki) for accessing the Skip Tracing Working Api API.
+This is an MCP server for accessing the Skip Tracing Working Api API.
 
 - **PyPI Package**: `bach-skip_tracing_working_api`
 - **Version**: 1.0.0
@@ -108,8 +108,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "skip_tracing_working_api": {
-      "command": "python",
-      "args": ["E:\path\to\skip_tracing_working_api\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-skip_tracing_working_api", "bach_skip_tracing_working_api"],
       "env": {
         "API_KEY": "your_api_key_here"
       }

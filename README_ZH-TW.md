@@ -30,7 +30,7 @@
 
 ## 簡介
 
-這是一個使用 [FastMCP](https://fastmcp.wiki) 自動生成的 MCP 伺服器，用於存取 Skip Tracing Working Api API。
+這是一個 MCP 伺服器，用於存取 Skip Tracing Working Api API。
 
 - **PyPI 套件名**: `bach-skip_tracing_working_api`
 - **版本**: 1.0.0
@@ -108,8 +108,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "skip_tracing_working_api": {
-      "command": "python",
-      "args": ["E:\path\to\skip_tracing_working_api\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-skip_tracing_working_api", "bach_skip_tracing_working_api"],
       "env": {
         "API_KEY": "your_api_key_here"
       }
@@ -239,7 +239,6 @@ Search people Using phone number
 
 ## 技术栈
 
-- **FastMCP**: 快速、Pythonic 的 MCP 服务器框架
 - **传输协议**: stdio
 - **HTTP 客户端**: httpx
 
